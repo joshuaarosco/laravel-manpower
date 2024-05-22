@@ -26,12 +26,9 @@ use Input, Auth;
 class AccountController extends Controller
 {
     //Do some magic
-    public function __construct(ICRUDService $CRUDservice, IStaffsRepository $staffRepo, IParticipantsRepository $participantRepo){
+    public function __construct(ICRUDService $CRUDservice){
         $this->data = [];
         $this->CRUDservice = $CRUDservice;
-
-        $this->staffRepo = $staffRepo;
-        $this->participantRepo = $participantRepo;
         
         $this->data['title'] = 'Account';
         $this->data['account'] = null;
@@ -41,12 +38,6 @@ class AccountController extends Controller
         if(!auth()->check())
             return abort(404);
         $account = null;
-        // if(auth()->user()->type == 'participant'){
-        //     $account = $this->participantRepo->findOrFail(auth()->user()->participant->id);
-        // }
-        // if(auth()->user()->type == 'staff'){
-        //     $account = $this->staffRepo->findOrFail(auth()->user()->staff->id);
-        // }
 
         $this->data['account'] = $account;
         return view('backoffice.pages.account.index',$this->data);

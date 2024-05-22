@@ -13,3 +13,12 @@
 
 Route::get('/',['as' => "index",'uses' => "PageController@index"]);
 
+Route::group(['as' => "workforce.", 'prefix' => "workforce"], function(){
+    Route::get('/',['as' => "index", 'uses' => "WorkforceController@index"]);
+    Route::get('view/{id}',['as' => "view", 'uses' => "WorkforceController@view"]);
+});
+
+Route::group(['as' => "jobs.", 'prefix' => "jobs"], function(){
+    Route::get('/',['as' => "index", 'uses' => "JobsController@index"]);
+    Route::get('view/{id}',['as' => "view", 'uses' => "JobsController@view"]);
+});

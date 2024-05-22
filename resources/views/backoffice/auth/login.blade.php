@@ -43,7 +43,7 @@
                   </div>
                   <div class="col-6">
                    <div class="fog-pwd text-end">
-                    <a href="{{ route('backoffice.auth.forgotPass') }}" class="hover-warning">Forgot password?</a><br>
+                    <a href="#" class="hover-warning">Forgot password?</a><br>
                     </div>
                   </div>
                   <!-- /.col -->
@@ -54,7 +54,7 @@
                   </div>
               </form>	
               <div class="text-center">
-                <p class="mt-15 mb-0">Don't have an account? <a href="{{ route('backoffice.auth.register') }}" class="text-warning ms-5">Sign Up</a></p>
+                <p class="mt-15 mb-0">Don't have an account? <a href="#" class="text-warning ms-5">Sign Up</a></p>
               </div>	
             </div>						
           </div>

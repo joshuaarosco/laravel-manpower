@@ -1,15 +1,59 @@
-<section class="p-b-30 p-t-40">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <!-- <div class="logo-mini w-40">
-                    <img src="{{asset('images/logo.png')}}" class="logo inline m-r-50" alt="">
-		        </div> -->
-                <p>{{env('APP_NAME')}}</p>
+<footer class="page_footer ds section_padding_top_65 section_padding_bottom_50">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-6 to_animate" data-animation="scaleAppear">
+				<div class="widget widget_text footer-email">
+					<p><strong>{{ config('app.name') }}</strong></p>
+					<p>Lomboy, Binmaley, Pangasinan</p>
+					<p>Philippines</p>
+					<p>
+						<a href="#">
+							<span class="__cf_email__" data-cfemail="9ef6fff0fae7f3fff0deedebeeeef1eceab0fdf1f3">support@manpowerapp.com.ph</span>
+						</a>
+					</p>
+					<p>+63(946) 397 8618, +63(922) 222 2222</p>
+					<ul id="menu-social-menu-short-footer" class="social-navigation social-footer">
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-783"><a href="#" class="social-icon bg-icon rounded-icon soc-facebook"></a></li>
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-782"><a href="#" class="social-icon bg-icon rounded-icon soc-twitter"></a></li>
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-784"><a href="#" class="social-icon bg-icon rounded-icon soc-skype"></a></li>
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-784"><a href="#" class="social-icon bg-icon rounded-icon soc-pinterest"></a></li>
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-784"><a href="#" class="social-icon bg-icon rounded-icon soc-linkedin"></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6 to_animate">
+                <div class="widget_text">
+                    <h5 class="widget-title m-uppercase w-hours-block">Working Hours</h5>
+                    <div class="border-paragraphs-footer">
+                        <p>Monday – Friday <span class="float-right">09.00 – 17.00</span></p>
+                        <p>Saturday<span class="float-right">09.00 – 15.00</span></p>
+                        <p>Sunday<span class="float-right">Closed</span></p>
+                        <br>
+                        <div class="widget widget_mailchimp">
+							<h4 class="m-uppercase widget-title">Newsletter Signup</h4>
+							<form class="signup form-inline" action="#" method="get">
+								<div class="form-group">
+									<input name="email" type="email" class="mailchimp_email form-control footer-mailchimp" placeholder="your@email.com">
+								</div>
+								<button type="submit" class="theme_button_footer">Send</button>
+								<div class="response"></div>
+							</form>
+						</div>
+                    </div>
+                    
+                </div>
             </div>
-            <div class="col-sm-6 text-right font-arial sm-text-left">
-                <p class="fs-11 muted">Copyright &copy; {{date('Y')}} {{env('APP_NAME')}}. All Rights Reserved.</p>
-            </div>
-        </div>
-    </div>
-</section>
+
+			<div class="col-md-4 col-sm-12 to_animate" data-animation="scaleAppear">
+				<div class="discount-block">
+					<a href="#">
+						<span>Get <span>10%</span> off</span>
+						<h5>On Any Services</h5>
+						<p>Redeem Code: wannadiscount</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

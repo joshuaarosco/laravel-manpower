@@ -35,7 +35,7 @@
 <body class="hold-transition light-skin sidebar-mini theme-success fixed">
 	
 <div class="wrapper">
-	<div id="loader"></div>
+	<!-- <div id="loader"></div> -->
 	
   @include('backoffice._components.header')
   

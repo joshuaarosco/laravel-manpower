@@ -4,8 +4,8 @@
 		<a href="{{route('backoffice.index')}}" class="logo">
 		  <!-- logo-->
 		  <div class="logo-mini w-40">
-			  <span class="light-logo"><img src="{{asset('images/logo.png')}}" alt="logo"></span>
-			  <span class="dark-logo"><img src="{{asset('images/logo.png')}}" alt="logo"></span>
+			  <!-- <span class="light-logo"><img src="{{asset('images/logo.png')}}" alt="logo"></span> -->
+			  <!-- <span class="dark-logo"><img src="{{asset('images/logo.png')}}" alt="logo"></span> -->
 		  </div>
 		  <div class="logo-lg">
 			  {{config('app.name')}}

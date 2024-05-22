@@ -12,10 +12,15 @@
     <title>{{config('app.name')}}</title>
 	
 	@include('backoffice.auth._includes.styles')
-
+  <style>
+    .btn-danger{
+      background-color: #e2001a!important;
+      border-color: #e2001a!important;
+    }
+  </style>
 </head>
 	
-<body class="hold-transition theme-primary bg-img" style="background-image: url({{asset('vet-clinic/images/auth-bg/bg-1.jpg')}})">
+<body class="hold-transition theme-primary bg-img" style="background-image: url({{asset('manpower/images/slide04.jpg')}})">
 	
 	@stack('content')
 
