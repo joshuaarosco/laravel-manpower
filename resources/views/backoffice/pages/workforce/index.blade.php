@@ -70,8 +70,8 @@
         font-weight: 300;
     }
     .workforce-img{
-        height: 75px!important;
-        width: 75px!important;
+        height: 100px!important;
+        width: 100px!important;
         border-radius: 50%;
     }
 </style>

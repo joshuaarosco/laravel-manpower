@@ -1,26 +1,25 @@
 <!-- sidebar -->
 <aside class="col-sm-5 col-md-3 col-lg-3">
     <div>
-        <div class="widget widget_price_filter">
+        <div class="widget">
 
-            <h3 class="widget-title">Price Filter</h3>
+            <h3 class="widget-title">Salary Filter</h3>
             <!-- price slider -->
             <form method="get" action="https://html.modernwebtemplates.com/" class="form-inline">
-                
-                <div class="slider-range-price"></div>
-
-                <div class="form-group">
-                    <label class="grey" for="slider_price_min">From: ₱</label>
-                    <input type="text" class="slider_price_min form-control text-center" id="slider_price_min" readonly>
-                </div>
-                
-                <div class="form-group">
-                    <label class="grey" for="slider_price_max"> - ₱</label>
-                    <input type="text" class="slider_price_max form-control text-center" id="slider_price_max" readonly>
-                </div>
-
-                <div class="text-right pull-right">
-                    <button type="submit" class="theme_button small_button color1">Filter</button>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="number" class="form-control input-md salary" id="minSalary" placeholder="Min">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mt-10">
+                            <input type="number" class="form-control input-md salary" id="maxSalary" placeholder="Max">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="button" id="filterButton" class="btn btn-block btn-md btn-filter">Filter</button>
+                    </div>
                 </div>
             </form>
         </div>
@@ -31,7 +30,7 @@
             <h3 class="widget-title">Search</h3>
             <form method="get" class="searchform form-inline" action="#">
                 <div class="form-group with_border_2">
-                    <input id="widget-search" type="text" value="" name="search" class="form-control" placeholder="Search...">
+                    <input id="widget-search" type="text" value="" name="search" class="form-control myInput" placeholder="Search...">
                 </div>
                 <button type="submit" class="theme_button">Search</button>
             </form>

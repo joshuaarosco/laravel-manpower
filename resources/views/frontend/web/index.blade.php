@@ -50,7 +50,7 @@
                                             <a href="#">{!! explode(' : ',$job)[1] !!}</a>
                                         </h3>
                                         <span class="price">
-                                            <span class="amount">₱ 550.00/day</span>
+                                            ₱ <span class="amount amount-salary">{{ rand(500, 1500) }}.00</span>/day
                                         </span>
                                     </div>
                                     <div class="col-md-6">
@@ -75,7 +75,7 @@
                     </ul>
                 </div> -->
                 <div class="col-sm-12 text-left">
-                    <a href="#" class="btn btn-view-more">View More</a>
+                    <a href="{{ route('workforce.index') }}" class="btn btn-view-more">View More</a>
                 </div>
             </div> <!--eof .col-sm-8 (main content)-->
 
@@ -95,4 +95,31 @@
         line-height: 5px!important;
     }
 </style>
+@endpush
+
+@push('js')
+<script>
+    $(".myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        console.log(value)
+        $("#products li").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+
+    $('#filterButton').click(function() {
+        var minSalary = parseInt($('#minSalary').val(), 10);
+        var maxSalary = parseInt($('#maxSalary').val(), 10);
+
+        $('#products li').each(function() {
+            var salary = parseInt($(this).find('.amount-salary').text(), 10);
+            //console.log('SALARY ===>>> '+$(this).find('.amount-salary').text());
+            if ((isNaN(minSalary) || salary >= minSalary) && (isNaN(maxSalary) || salary <= maxSalary)) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
+</script>
 @endpush

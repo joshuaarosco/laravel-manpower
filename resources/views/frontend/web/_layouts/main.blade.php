@@ -56,9 +56,7 @@
     <div class="preloader">
         <div class="preloader_image"></div>
     </div>
-        <script src="{{asset('manpower/js/compressed.js')}}"></script>
-        <script src="{{asset('manpower/js/main.js')}}"></script>
-        <!-- <script src="{{asset('manpower/js/switcher.js')}}"></script> -->
+    @include('frontend.web._includes.scripts')
 
     </body>
 </html>
