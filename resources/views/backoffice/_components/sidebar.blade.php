@@ -20,7 +20,7 @@
 							</span>
 						</a>
 						<ul class="treeview-menu {{Request::is('backoffice/workforce*')?'display-block':''}}">	
-							<li><a class="{{in_array(request()->route()->getName(),['backoffice.workforce.index'])?'text-primary':''}}" href="#"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>List</a></li>
+							<li><a class="{{in_array(request()->route()->getName(),['backoffice.workforce.index'])?'text-primary':''}}" href="{{ route('backoffice.workforce.index') }}"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>List</a></li>
 						</ul>	
 					</li>
 					<li class="treeview {{Request::is('backoffice/jobs*')?'menu-open':''}}">

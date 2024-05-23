@@ -34,7 +34,7 @@ Route::group(['middleware' => ["backoffice.auth"
     Route::any('viewReport',['as' => "viewReport",'uses' => "DashboardController@viewReport"]);
 
     Route::group(['as' => "workforce.", 'prefix' => "workforce"], function(){
-        Route::get('/',['as' => "index", 'uses' => "ParticipantsController@index"]);
+        Route::get('/',['as' => "index", 'uses' => "WorkforceController@index"]);
         Route::get('create',['as' => "create", 'uses' => "ParticipantsController@create"]);
         Route::post('create',['middleware' => "backoffice.superUserOnly", 'uses' => "ParticipantsController@store"]);
         Route::get('view/{id}',['as' => "view",'uses' => "ParticipantsController@view"]);

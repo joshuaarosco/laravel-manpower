@@ -1,6 +1,6 @@
 @extends('backoffice._layout.main')
 
-@push('title','Job List')
+@push('title','Workforce List')
 
 @push('css')
 <style type="text/css">
@@ -69,6 +69,11 @@
         font-size: 15px;
         font-weight: 300;
     }
+    .workforce-img{
+        height: 75px!important;
+        width: 75px!important;
+        border-radius: 50%;
+    }
 </style>
 @endpush
 
@@ -79,12 +84,12 @@
         <div class="content-header">
             <div class="d-flex align-items-center">
                 <div class="me-auto">
-                    <h4 class="page-title">Jobs</h4>
+                    <h4 class="page-title">Workforce</h4>
                     <div class="d-inline-block align-items-center">
                         <nav>
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{ route('backoffice.index') }}"><i class="mdi mdi-home-outline"></i></a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Jobs</li>
+                                <li class="breadcrumb-item active" aria-current="page">Workforce List</li>
                             </ol>
                         </nav>
                     </div>
@@ -104,7 +109,7 @@
                             <div id="external-events">
                                 <div class="row">
                                     <div class="col-md-7">
-                                        <h3 class="fw-300">Job Posts</h3>
+                                        <h3 class="fw-300">Workforce</h3>
                                     </div>
                                     <div class="col-md-5">
                                         <div class="row">
@@ -137,28 +142,31 @@
                                     <thead>
                                         <tr>
                                             <th></th>
+                                            <th style="width: 10%"></th>
+                                            <th style="width: 20%">Name</th>
                                             <th style="width: 30%">Job Title</th>
-                                            <th style="width: 30%">Salary ₱/day</th>
-                                            <th style="width: 60%">Schedule</th>
+                                            <th style="width: 30%">Salary | ₱/day</th>
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @forelse(range(1,10) as $index => $event)
+                                        @forelse(range(1,8) as $index => $event)
                                         @php
                                         $salary = rand(500, 1500);
                                         @endphp
                                         <tr class="hover-primary myData" data-salary="{{ $salary }}">
                                             <th>{{$index+=1}}</th>
                                             <td>
+                                                <img src="{{asset('manpower/images/people/'.$index.'.jpg')}}" alt="img-{{$index}}" class="workforce-img">
+                                            </td>
+                                            <td>
+                                                <strong>{!! $names[$index] !!}</strong>
+                                            </td>
+                                            <td>
                                                 {!! $jobTitles[rand(0,14)] !!}
                                             </td>
                                             <td>
                                                 {{ number_format($salary, 2) }}
-                                            </td>
-                                            <td>
-                                                <strong>Start</strong> : {{date('Y-m-'.rand(1, 15).' 0'.rand(6, 9).':00 ').'AM' }} <br>
-                                                <strong>End</strong> : {{date('Y-m-'.rand(16, 29).' 0'.rand(4, 7).':00 ').'PM' }}
                                             </td>
                                             <td>												
                                                 <div class="btn-group">
@@ -222,7 +230,7 @@
             var maxSalary = parseInt($('#maxSalary').val(), 10);
 
             $('#myTable tbody tr').each(function() {
-                var salary = parseInt($(this).find('td').eq(1).text(), 10);
+                var salary = parseInt($(this).find('td').eq(3).text(), 10);
                 console.log(salary);
                 if ((isNaN(minSalary) || salary >= minSalary) && (isNaN(maxSalary) || salary <= maxSalary)) {
                     $(this).show();
