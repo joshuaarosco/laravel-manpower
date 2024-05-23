@@ -166,7 +166,7 @@
                                                 {!! $jobTitles[rand(0,14)] !!}
                                             </td>
                                             <td>
-                                                {{ number_format($salary, 2) }}
+                                                {{ $salary }}.00
                                             </td>
                                             <td>												
                                                 <div class="btn-group">

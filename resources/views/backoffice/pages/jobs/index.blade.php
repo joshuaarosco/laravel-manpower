@@ -154,7 +154,7 @@
                                                 {!! $jobTitles[rand(0,14)] !!}
                                             </td>
                                             <td>
-                                                {{ number_format($salary, 2) }}
+                                                {{ $salary }}.00
                                             </td>
                                             <td>
                                                 <strong>Start</strong> : {{date('Y-m-'.rand(1, 15).' 0'.rand(6, 9).':00 ').'AM' }} <br>
